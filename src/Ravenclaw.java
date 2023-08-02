@@ -21,13 +21,15 @@ public class Ravenclaw extends Hogwarts {
     }
 
     public void comparisonOfProperties(Ravenclaw name1) {
-        int n1 = name1.getIntellect() + name1.getWisdom() + name1.getWit() + name1.getCreativity();
-        int n2 = this.intellect + this.wisdom + this.wit + this.creativity;
-        if (n1 > n2) {
-            System.out.println("У " + name1.getName() + " свойства выше и равны: " + n1 + ", так как " + this.getName() + " имеет свойства равны: " + n2);
+        if (name1.getSum() > this.getSum()) {
+            System.out.println("У " + name1.getName() + " свойства выше и равны: " + name1.getSum() + ", так как " + this.getName() + " имеет свойства равны: " + this.getSum());
         } else {
-            System.out.println("У " + this.getName() + " свойства выше и равны: " + n2 + ", так как " + name1.getName() + " имеет свойства равны: " + n1);
+            System.out.println("У " + this.getName() + " свойства выше и равны: " + this.getSum() + ", так как " + name1.getName() + " имеет свойства равны: " + name1.getSum());
         }
+    }
+
+    public int getSum() {
+        return getIntellect() + getWisdom() + getWit() + getCreativity();
     }
 
 
